@@ -1,0 +1,19 @@
+#Setting the parameters:
+T <- 1        
+N <- 1000     
+dt <- T / N   
+
+#Setting the time grid:
+t <- seq(0, T, length.out = N + 1)
+
+#Generating Brownian increments:
+dW <- rnorm(N, mean = 0, sd = sqrt(dt))
+
+#Constructing the Brownian path:
+W <- c(0, cumsum(dW))
+
+Visualizing the motion:
+plot(t, W, type = "l", col = "blue", lwd = 2,
+     main = "Simulated Brownian Motion on [0,1]",
+     xlab = "Time", ylab = "W(t)")
+grid()
