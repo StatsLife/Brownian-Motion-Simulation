@@ -15,8 +15,9 @@ dW <- rnorm(N, mean = 0, sd = sqrt(dt))
 #Constructing the Brownian path:
 W <- c(0, cumsum(dW))
 
-Visualizing the motion:
-plot(t, W, type = "l", col = "blue", lwd = 2,
-     main = "Simulated Brownian Motion on [0,1]",
-     xlab = "Time", ylab = "W(t)")
-grid()
+# Visualizing the motion:
+ggplot() +
+  geom_line(aes(x = t, y = W), color = "darkblue") +
+  labs(title = "Simulated BM Path", x = "Time", y = "Position")+
+  theme(plot.title = element_text(size = 12.5, face = "bold"))
+
