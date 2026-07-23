@@ -1,3 +1,6 @@
+#Loading the ggplot2 package:
+library(ggplot2)
+
 #Setting the parameters:
 T <- 1        
 N <- 1000     
