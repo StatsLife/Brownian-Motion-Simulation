@@ -6,7 +6,7 @@ dt <- T / N
 #Setting the time grid:
 t <- seq(0, T, length.out = N + 1)
 
-#Generating Brownian increments:
+#Generating Brownian motion increments:
 dW <- rnorm(N, mean = 0, sd = sqrt(dt))
 
 #Constructing the Brownian path:
